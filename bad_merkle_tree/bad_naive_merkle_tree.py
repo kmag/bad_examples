@@ -17,7 +17,7 @@ entity0 = [ file0, file1, [ file2, file3 ] ]
 entity1 = [ file0, file1, file4 ]
 
 def wrong_way_to_do_it(entity):
-  '''jbenet's / original THEX proposal wrong way to implement a Merkle tree'''
+  '''BEP 30 / original THEX proposal wrong way to implement a Merkle tree'''
   result = sha256()
   if type(entity) == bytes:
     # Hashing a file
@@ -57,4 +57,4 @@ if __name__ == '__main__':
   else:
     print('\nDrat! Hash collision ate all my data!')
   if less_wrong(entity0) != less_wrong(entity1):
-    print("Use Daemen's Sakura construction instead!") 
+    print("Use Joan Daemen's Sakura construction instead!") 
